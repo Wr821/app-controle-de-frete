@@ -1,0 +1,462 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #207feb;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.header-slider {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header-slider .logo {
+    position: absolute;
+    left: 1rem;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slider-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px; /* match header height */
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider-images img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin: auto;
+    position: relative;
+}
+
+.slider-images img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    border-bottom: 3px solid #ffcc00;
+    outline: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #003366;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.blue-bg {
+    background-color: #e6f0ff;
+}
+
+.frota-fotos {
+    position: relative;
+    max-width: 400px;
+    margin-top: 1rem;
+    height: 300px;
+    overflow: hidden;
+}
+
+.frota-fotos img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.frota-fotos img.active {
+    display: block;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: #003366;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.arrow.left {
+    left: -40px;
+}
+
+.arrow.right {
+    right: -40px;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #002244;
+    outline: none;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #25d366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover,
+.whatsapp-button:focus {
+    background-color: #1ebe57;
+    outline: none;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navbar and menu styles */
+
+.navbar {
+    background-color: #002a6d;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slider-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.slider-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-images img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: #ffcc00;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 0.5rem 1rem;
+    font-weight: normal;
+}
+
+.dropdown-content li a:hover,
+.dropdown-content li a:focus {
+    background-color: #002a6d;
+    color: #ffcc00;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.dropbtn::after {
+    content: " ▼";
+    font-size: 0.6rem;
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.whatsapp-button:hover,
+.whatsapp-button:focus {
+    background-color: #1ebe57;
+    outline: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #002a6d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 0 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.fretes-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.fretes-button:hover,
+.fretes-button:focus {
+    border-bottom: 3px solid #ffcc00;
+    outline: none;
+}
